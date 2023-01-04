@@ -1,3 +1,17 @@
+//Brute force : make the copy of original matrix, iterate in the matrix whenever you find zero make its row & columns to zero
+                TC: (o(m*n)*(m+n)) // m*n will be taken for finding the zeros in the matrix and m+n will be taken for making the rows & columns to be zero
+                SC: o(m*n) // copying the original matrix
+                
+//optimzed approach: Keeping the track record of rows & columns and when you counter zeros just turn zeros to the row & columns which you added to solve the problem.
+                TC: (o(m*n)*(m*n)) ~= o(m*n)
+                SC: (o(m*n)*(m+n))
+                    
+//Most Optimized Approach: we will be using the first and first columns for keeping track of zeros and we will iterate in the matrix for column 2 and check whenever 
+                          zeros then turns the upper rows and leftmost columns to zeros and column first variable as true. Now interate from down the last element of 
+                          matrix & whenever find zeros at upper & leftmost make that element as zeros and heck if columns first is true then make whole column as zero
+               TC: o(m*n)+(m*n) ~= o(m*n)
+               SC: o(1)
+
 class Solution {
 public:
     void setZeroes(vector<vector<int>>& matrix) {
