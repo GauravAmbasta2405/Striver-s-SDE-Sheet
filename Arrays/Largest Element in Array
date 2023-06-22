@@ -1,3 +1,16 @@
+Brute force:- Sorting the array so the last element will be the largest one.
+TC: O(nlogn)
+SC: O(1)
+
+Optimal:- we would initialize the largest variable  and store the first element in that variable and iterate in the array with a condition largets < arr[i], 
+if this condition violates we would change the elements in the largest variable.
+TC: O(n)
+SC: O(1)
+
+
+
+
+class Solution
 {
 public:
     int largest(vector<int> &arr, int n)
